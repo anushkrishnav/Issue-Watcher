@@ -4,9 +4,9 @@ import os
 import json
 
 def count_issues(name, token):
-    owner = "TesseractCoding"
-    repo = "NeoAlgo"
-    author = "name"
+    owner = name
+    repo = "Issue-spam-blocker"
+    author = name
     query_url = f"https://api.github.com/search/issues?q=is:issue+repo:{owner}/{repo}+author:{author}+is:open"
 
     headers = {'Authorization': f'token {token}'}
