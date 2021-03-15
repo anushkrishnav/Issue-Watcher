@@ -42,7 +42,7 @@ def close_issue(num):
 
 github = github.Github(token)
 
-repo = github.get_repo("anushkrishnav/Issue-spam-blocker")
+repo = github.get_repo("GITHUB_REPOSITORY")
 
 count = count_issues(name=author,token=token)
 
