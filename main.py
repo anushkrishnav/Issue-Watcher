@@ -43,7 +43,7 @@ def close_issue(num):
 
 github = github.Github(token)
 
-repo = github.get_repo(repo)
+repo = github.get_repo('anushkrishav/supdem')
 
 count = count_issues(name=author,token=token)
 
