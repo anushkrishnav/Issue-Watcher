@@ -33,7 +33,9 @@ author = os.environ['INPUT_AUTHOR']
 repourl = os.environ['GITHUB_REPOSITORY']
 def close_issue(num):
     issue = repo.get_issue(num)
-    issue.create_comment('bonk !! <br> ![](https://i.imgflip.com/urmgl.jpg) You cannont create more than 3 Issues at a time close your old issues to make a new one')
+    issue.create_comment('# STOMP !! <br> \
+![](https://i.imgflip.com/urmgl.jpg) <br> \
+## You cannot have more than 3 issues open, kindly close or finish your current issues before you make a new one.')
     issue.edit(state = 'closed')
 
 
