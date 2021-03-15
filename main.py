@@ -35,7 +35,7 @@ def close_issue(num):
     issue = repo.get_issue(num)
     issue.create_comment('# STOMP !! <br> \
 ![](https://i.imgflip.com/urmgl.jpg) <br> \
-## You cannot have more than 3 issues open, kindly close or finish your current issues before you make a new one.')
+ You cannot have more than 3 issues open, kindly close or finish your current issues before you make a new one.')
     issue.edit(state = 'closed')
 
 
