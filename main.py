@@ -1,32 +1,22 @@
 import os
 import github
+from script import count_issues,get_latest_issue
 
-# extracting all the input from environments
-title = os.environ['INPUT_TITLE']
 token = os.environ['INPUT_TOKEN']
-labels = os.environ['INPUT_LABELS']
-assignees = os.environ['INPUT_ASSIGNEES']
-body = os.environ['INPUT_BODY']
+author = os.environ['INPUT_AUTHOR']
 
-# as I said GitHub expects labels and assignees as list but we supplied as string in yaml as list are not supposed in
-# .yaml format
-if labels and labels != '':
-    labels = labels.split(',')  # splitting by , to make a list
-else:
-    labels = []  # setting empty list if we get labels as '' or None
+def close_issue(num):
+    issue = repo.get_issue(num)
+    issue.create_comment('bonk !! You cannont create more than 3 Issues at a time close your old issues to make a new one')
+    issue.edit(state = 'closed')
 
-if assignees and assignees != '':
-    assignees = assignees.split(',')  # splitting by , to make a list
-else:
-    assignees = []  # setting empty list if we get labels as '' or None
 
 github = github.Github(token)
-# GITHUB_REPOSITORY is the repo name in owner/name format in Github Workflow
 repo = github.get_repo(os.environ['GITHUB_REPOSITORY'])
 
-issue = repo.create_issue(
-    title=title,
-    body=body,
-    assignees=assignees,
-    labels=labels
-)
+count_issues(name=author,token=token)
+
+numb = get_latest_issue(name=author,token=token)
+if count_issues >= 4:
+    close_issue(numb)
+
