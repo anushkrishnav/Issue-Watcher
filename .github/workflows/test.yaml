@@ -15,3 +15,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }} # default token in GitHub Workflow
           author: anushkrishnav
+          repo: anushkrishnav/Issue-Police

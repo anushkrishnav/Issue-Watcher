@@ -9,6 +9,8 @@ inputs:
     required: false
     description: Assignees of the issue
     default: '${{github.actor}}'
+  repo:
+    description: repo url in the form owner/repo
 runs:
   using: docker # we are saying this action will run on docker
   image: 'Dockerfile' # we will use our own Dockerfile to build an image and run it.

@@ -28,15 +28,18 @@ def get_latest_issue(name,token, repo):
     k = k[0]
     return k['number']
 
-token = os.environ['INPUT_TOKEN']
-author = os.environ['INPUT_AUTHOR']
-repourl = os.environ['GITHUB_REPOSITORY']
-def close_issue(num):
+def close_issue(num,repo):
     issue = repo.get_issue(num)
     issue.create_comment('# STOMP !! <br> \
-![](https://i.imgflip.com/urmgl.jpg) <br> \
- You cannot have more than 3 issues open, kindly close or finish your current issues before you make a new one.')
+        ![](https://i.imgflip.com/urmgl.jpg) <br> \
+        You cannot have more than 3 issues open, kindly close or finish your current issues before you make a new one.')
     issue.edit(state = 'closed')
+    return
+
+
+token = os.environ['INPUT_TOKEN']
+author = os.environ['INPUT_AUTHOR']
+repourl = os.environ['INPUT_REPO']
 
 
 github = github.Github(token)
@@ -47,5 +50,5 @@ count = count_issues(name=author, token=token, repo=repourl)
 
 numb = get_latest_issue(name=author, token=token, repo=repourl)
 if count >= 4:
-    close_issue(numb)
+    close_issue(numb,repo)
 
