@@ -34,6 +34,7 @@ def get_latest_issue(name,token):
 
 token = os.environ['INPUT_TOKEN']
 author = os.environ['INPUT_AUTHOR']
+repo = os.environ['GITHUB_REPOSITORY']
 def close_issue(num):
     issue = repo.get_issue(num)
     issue.create_comment('bonk !! You cannont create more than 3 Issues at a time close your old issues to make a new one')
@@ -42,7 +43,7 @@ def close_issue(num):
 
 github = github.Github(token)
 
-repo = github.get_repo(os.environ['GITHUB_REPOSITORY'])
+repo = github.get_repo(repo)
 
 count = count_issues(name=author,token=token)
 
