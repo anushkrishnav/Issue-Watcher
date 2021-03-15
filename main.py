@@ -1,8 +1,7 @@
 import os
 import github
-from script import count_issues
+from script import count_issues,get_latest_issue
 
-numb = os.environ['INPUT_NUMBER']
 token = os.environ['INPUT_TOKEN']
 author = os.environ['INPUT_AUTHOR']
 
@@ -14,5 +13,6 @@ def close_issue(num):
 github = github.Github(token)
 repo = github.get_repo(os.environ['GITHUB_REPOSITORY'])
 count_issues(name=author,token=token)
+numb = get_latest_issue(name=author,token=token)
 if count_issues >= 4:
     close_issue(numb)
