@@ -1,6 +1,6 @@
 name: Test Workflow
 on:
-  issue:
+  issues:
     types: [created]
 
 jobs:
