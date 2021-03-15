@@ -1,6 +1,10 @@
 import os
 import requests
 import github
+from os.path import join, dirname
+from dotenv import load_dotenv
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
 
 def count_issues(name, token):
     owner = name
@@ -30,7 +34,6 @@ def get_latest_issue(name,token):
 
 token = os.environ['INPUT_TOKEN']
 author = os.environ['INPUT_AUTHOR']
-
 def close_issue(num):
     issue = repo.get_issue(num)
     issue.create_comment('bonk !! You cannont create more than 3 Issues at a time close your old issues to make a new one')
@@ -38,15 +41,12 @@ def close_issue(num):
 
 
 github = github.Github(token)
-repo = github.get_repo(os.environ['GITHUB_REPOSITORY'])
-issue = repo.create_issue(
-    title="title",
-    body="body",
-    assignees=author,
-)
-count_issues(name=author,token=token)
+
+repo = github.get_repo("anushkrishnav/Issue-spam-blocker")
+
+count = count_issues(name=author,token=token)
 
 numb = get_latest_issue(name=author,token=token)
-if count_issues >= 4:
+if count >= 4:
     close_issue(numb)
 
