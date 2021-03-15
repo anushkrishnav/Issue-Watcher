@@ -1,8 +1,5 @@
 name: Test Workflow
-on:
-  issues:
-    types: [opened]
-
+on:[push, issues]
 jobs:
   first-job:
     runs-on: ubuntu-latest
