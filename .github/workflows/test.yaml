@@ -1,7 +1,7 @@
 name: Test Workflow
 on:
   issues:
-    types: [created]
+    types: [opened]
 
 jobs:
   first-job:
