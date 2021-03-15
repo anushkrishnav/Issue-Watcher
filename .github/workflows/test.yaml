@@ -1,5 +1,5 @@
 name: Test Workflow
-on:[push, issues]
+on: push
 jobs:
   first-job:
     runs-on: ubuntu-latest
@@ -10,4 +10,4 @@ jobs:
         uses: ./
         with:
           token: ${{ secrets.GITHUB_TOKEN }} # default token in GitHub Workflow
-          author: ${{ github.actor}}
+          author: anushkrishnav
