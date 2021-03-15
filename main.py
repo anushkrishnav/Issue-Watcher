@@ -6,11 +6,9 @@ from dotenv import load_dotenv
 dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
 
-def count_issues(name, token):
-    owner = name
-    repo = "supdem"
+def count_issues(name, token, repo):
     author = name
-    query_url = f"https://api.github.com/search/issues?q=is:issue+repo:{owner}/{repo}+author:{author}+is:open"
+    query_url = f"https://api.github.com/search/issues?q=is:issue+repo:{repo}+author:{author}+is:open"
 
     headers = {'Authorization': f'token {token}'}
 
@@ -18,11 +16,9 @@ def count_issues(name, token):
     raw=(r.json())
     return raw['total_count']
 
-def get_latest_issue(name,token):
-    owner = name
-    repo = "supdem"
+def get_latest_issue(name,token, repo):
     author = name
-    query_url = f"https://api.github.com/search/issues?q=is:issue+repo:{owner}/{repo}+author:{author}+is:open"
+    query_url = f"https://api.github.com/search/issues?q=is:issue+repo:{repo}+author:{author}+is:open"
 
     headers = {'Authorization': f'token {token}'}
 
@@ -34,7 +30,7 @@ def get_latest_issue(name,token):
 
 token = os.environ['INPUT_TOKEN']
 author = os.environ['INPUT_AUTHOR']
-repo = os.environ['GITHUB_REPOSITORY']
+repourl = os.environ['GITHUB_REPOSITORY']
 def close_issue(num):
     issue = repo.get_issue(num)
     issue.create_comment('bonk !! You cannont create more than 3 Issues at a time close your old issues to make a new one')
@@ -43,11 +39,11 @@ def close_issue(num):
 
 github = github.Github(token)
 
-repo = github.get_repo('anushkrishnav/supdem')
+repo = github.get_repo(repourl)
 
-count = count_issues(name=author,token=token)
+count = count_issues(name=author, token=token, repo=repourl)
 
-numb = get_latest_issue(name=author,token=token)
+numb = get_latest_issue(name=author, token=token, repo=repourl)
 if count >= 4:
     close_issue(numb)
 
