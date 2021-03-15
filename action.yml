@@ -10,14 +10,6 @@ inputs:
   token: # token variable available in workflow as env var named INPUT_TOKEN
     required: true
     description: Token of the user that creates the issue
-  # available as INPUT_LABELS in github they expect this as list but in yaml we can't pass list
-  # so what we do we will pass the labels value as like this v1,bug,feature
-  # in our action we will split it by ,
-  labels:
-    required: false
-    default: ''
-    description: Labels of the issue
-  # assignees input in github api is just like labels we will do the same for assignees
   assignees: # available as INPUT_ASSIGNEES
     required: false
     description: Assignees of the issue
