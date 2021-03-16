@@ -24,6 +24,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }} # default token in GitHub Workflow
           author: anushkrishnav
           repo: {owner}/{repo} # your repo
+          maxIssue: 2
 
 ```
 # Note

@@ -40,7 +40,10 @@ def close_issue(num,repo):
 token = os.environ['INPUT_TOKEN']
 author = os.environ['INPUT_AUTHOR']
 repourl = os.environ['INPUT_REPO']
+maxi = os.environ['INPUT_MAXISSUE']
 
+if maxi == None:
+    maxi = 2
 
 github = github.Github(token)
 repo = github.get_repo(repourl)
@@ -48,6 +51,6 @@ repo = github.get_repo(repourl)
 count = count_issues(name=author, token=token, repo=repourl)
 
 numb = get_latest_issue(name=author, token=token, repo=repourl)
-if count >= 3:
+if count >= maxi+1:
     close_issue(numb,repo)
 
