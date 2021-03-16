@@ -18,12 +18,12 @@ jobs:
     - name: Checkout code
         uses: actions/checkout@main
     - name: Run Action
-        uses: anushkrishnav/Issue-Police@main
+        uses: anushkrishnav/Issue-Watcher@main
         uses: ./
         with:
           token: ${{ secrets.GITHUB_TOKEN }} # default token in GitHub Workflow
           author: anushkrishnav
-          repo: {owner}/{repo}
+          repo: {owner}/{repo} # your repo
 
 ```
 # Note
