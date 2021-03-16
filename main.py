@@ -43,6 +43,7 @@ repourl = os.environ['INPUT_REPO']
 
 
 github = github.Github(token)
+
 repo = github.get_repo(repourl)
 
 count = count_issues(name=author, token=token, repo=repourl)
