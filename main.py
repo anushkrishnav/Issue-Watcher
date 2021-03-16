@@ -40,7 +40,7 @@ def close_issue(num,repo):
 token = os.environ['INPUT_TOKEN']
 author = os.environ['INPUT_AUTHOR']
 repourl = os.environ['INPUT_REPO']
-maxi = os.environ['INPUT_MAXISSUE']
+maxi = int(os.environ['INPUT_MAXISSUE'])
 
 if maxi == None:
     maxi = 2
