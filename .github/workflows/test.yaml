@@ -12,7 +12,6 @@ jobs:
         uses: actions/checkout@main
       - name: Run Action
         uses: ./
-        env
         with:
           token: '${{ secrets.GITHUB_TOKEN }}'
           author: anushkrishnav
