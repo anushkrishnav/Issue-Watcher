@@ -13,6 +13,6 @@ jobs:
       - name: Run Action
         uses: ./
         with:
-          ghtoken: ${{ secrets.ghtoken }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           author: anushkrishnav
           repo: anushkrishnav/Issue-Police

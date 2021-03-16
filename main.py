@@ -37,7 +37,7 @@ def close_issue(num,repo):
     return
 
 
-token = os.environ['INPUT_GHTOKEN']
+token = os.environ['INPUT_GITHUB_TOKEN']
 author = os.environ['INPUT_AUTHOR']
 repourl = os.environ['INPUT_REPO']
 
