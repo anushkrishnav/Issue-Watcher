@@ -1,6 +1,12 @@
-# Rouge Spammers with a mission to disrupt the peace of the valley ? Fear not we will STOMP the Spammers
+<p align="center">
+<img src="img/White and Green Gaming Badge Logo.png" height = "400px">
+</p> <br>
 
-![](botinaction.jpeg)
+# Rouge Spammers with a mission to disrupt the peace of the valley ? Fear not we will STOMP the Spammers
+This tool helps you to keep your project from being spammed due various reason, You can customise it to set the maximum count of ctive issue a contributor can have.
+The project is currently a work in progress might have bugs if you do find bugs please report it [here](https://github.com/anushkrishnav/Issue-Watcher/issues)
+<img src="img/botinaction.jpeg" height = "500px">
+![]()
 
 ### Example workflow
 
