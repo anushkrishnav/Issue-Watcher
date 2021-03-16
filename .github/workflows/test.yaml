@@ -15,4 +15,4 @@ jobs:
         with:
           token: '${{ secrets.GITHUB_TOKEN }}'
           author: anushkrishnav
-          repo: anushkrishnav/Issue-Issue-Watcher
+          repo: anushkrishnav/Issue-Watcher
