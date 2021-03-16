@@ -2,20 +2,17 @@
 name: Close Issue Action
 description: This action closes an issue based on the number of issues a person has
 inputs:
-  token:
-    description: Token of the user that creates the issue
+  token: # token variable available in workflow as env var named INPUT_TOKEN
     required: true
-    default: ${{ github.token }}
-
-
+    description: Token of the user that creates the issue
   author: # available as INPUT_ASSIGNEES
-    description: Assignees of the issue
     required: false
-    default: ${{github.actor}}
+    description: Assignees of the issue
+    default: '${{github.actor}}'
   repo:
     description: repo url in the form owner/repo
 runs:
-  using: 'docker' # we are saying this action will run on docker
+  using: docker # we are saying this action will run on docker
   image: 'Dockerfile' # we will use our own Dockerfile to build an image and run it.
 
 branding: #generates a logo for our action
