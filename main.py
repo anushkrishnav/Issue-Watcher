@@ -30,8 +30,8 @@ def get_latest_issue(name,token, repo):
 
 def close_issue(num,repo):
     issue = repo.get_issue(num)
-    issue.create_comment('# STOMP !! <br> \
-        ![](https://i.imgflip.com/urmgl.jpg) <br> \
+    issue.create_comment('## STOMP !! <br> \
+        ![](https://pbs.twimg.com/media/EWQM1qRUEAAEVdh.jpg) <br> \
         You cannot have more than 3 issues open, kindly close or finish your current issues before you make a new one.')
     issue.edit(state = 'closed')
     return

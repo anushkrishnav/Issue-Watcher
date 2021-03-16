@@ -15,9 +15,10 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+    - name: Checkout code
+        uses: actions/checkout@main
+    - name: Run Action
         uses: anushkrishnav/Issue-Police@main
-      - name: Run Action
         uses: ./
         with:
           token: ${{ secrets.GITHUB_TOKEN }} # default token in GitHub Workflow

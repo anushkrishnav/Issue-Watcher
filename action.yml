@@ -6,10 +6,11 @@ inputs:
     required: true
     description: Token of the user that creates the issue
   author: # available as INPUT_ASSIGNEES
-    required: false
+    required: true
     description: Assignees of the issue
     default: '${{github.actor}}'
   repo:
+    required: true
     description: repo url in the form owner/repo
 runs:
   using: docker # we are saying this action will run on docker
