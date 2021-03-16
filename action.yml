@@ -6,7 +6,7 @@ inputs:
     default: ${{ github.token }}
     required: true
     description: Token of the user that creates the issue
-  author: # available as INPUT_ASSIGNEES
+  author:
     required: false
     description: Assignees of the issue
     default: '${{github.actor}}'
