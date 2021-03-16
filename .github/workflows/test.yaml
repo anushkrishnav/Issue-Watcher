@@ -12,7 +12,8 @@ jobs:
         uses: actions/checkout@main
       - name: Run Action
         uses: ./
+        env
         with:
-          token: ${{ secrets.GITHUB_TOKEN }} # default token in GitHub Workflow
+          token: '${{ secrets.GITHUB_TOKEN }}'
           author: anushkrishnav
           repo: anushkrishnav/Issue-Police
