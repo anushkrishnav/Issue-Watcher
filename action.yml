@@ -2,17 +2,21 @@
 name: Close Issue Action
 description: This action closes an issue based on the number of issues a person has
 inputs:
-  token:
-    required: true
+  ghtoken:
     description: Token of the user that creates the issue
+    required: true
+
+    default: ${{ github.token }}
+
+
   author: # available as INPUT_ASSIGNEES
-    required: false
     description: Assignees of the issue
-    default: '${{github.actor}}'
+    required: false
+    default: ${{github.actor}}
   repo:
     description: repo url in the form owner/repo
 runs:
-  using: docker # we are saying this action will run on docker
+  using: 'docker' # we are saying this action will run on docker
   image: 'Dockerfile' # we will use our own Dockerfile to build an image and run it.
 
 branding: #generates a logo for our action

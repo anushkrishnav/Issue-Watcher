@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@main
+        uses: actions/checkout@v2
       - name: Run Action
         uses: ./
         with:
-          token: ${{ secrets.GITHUB_TOKEN }} # default token in GitHub Workflow
+          ghtoken: ${{ secrets.ghtoken }}
           author: anushkrishnav
           repo: anushkrishnav/Issue-Police
