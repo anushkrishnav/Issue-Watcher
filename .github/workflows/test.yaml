@@ -10,8 +10,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@main
-      - name: Run Action
-        uses: ./
+      - name: Close Issue Action
+        uses: anushkrishnav/Issue-Police@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }} # default token in GitHub Workflow
           author: anushkrishnav
