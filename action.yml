@@ -3,7 +3,7 @@ name: Close Issue Action
 description: This action closes an issue based on the number of issues a person has
 inputs:
   token:
-    default: ${{ github.token }}
+    default: ${{ secrets.GITHUB_TOKEN }}
     required: true
     description: Token of the user that creates the issue
   author: # available as INPUT_ASSIGNEES
