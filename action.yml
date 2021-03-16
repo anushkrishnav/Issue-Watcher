@@ -2,7 +2,8 @@
 name: Close Issue Action
 description: This action closes an issue based on the number of issues a person has
 inputs:
-  token: # token variable available in workflow as env var named INPUT_TOKEN
+  token:
+    default: ${{ github.token }}
     required: true
     description: Token of the user that creates the issue
   author: # available as INPUT_ASSIGNEES
