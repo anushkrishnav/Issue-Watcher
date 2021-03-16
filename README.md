@@ -22,6 +22,8 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }} # default token in GitHub Workflow
           author: anushkrishnav
+          repo: {owner}/{repo}
+
 ```
 # Note
 This project is a WIP.
