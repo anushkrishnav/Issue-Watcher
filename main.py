@@ -48,6 +48,6 @@ repo = github.get_repo(repourl)
 count = count_issues(name=author, token=token, repo=repourl)
 
 numb = get_latest_issue(name=author, token=token, repo=repourl)
-if count >= 4:
+if count >= 3:
     close_issue(numb,repo)
 
