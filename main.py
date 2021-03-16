@@ -2,9 +2,9 @@ import os
 import requests
 import github
 from os.path import join, dirname
-# from dotenv import load_dotenv
-# dotenv_path = join(dirname(__file__), '.env')
-# load_dotenv(dotenv_path)
+from dotenv import load_dotenv
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
 
 def count_issues(name, token, repo):
     author = name
@@ -43,7 +43,7 @@ repourl = os.environ['INPUT_REPO']
 
 
 github = github.Github(token)
-
+print(token)
 repo = github.get_repo(repourl)
 
 count = count_issues(name=author, token=token, repo=repourl)
