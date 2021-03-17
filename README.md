@@ -6,7 +6,7 @@
 This tool was created to helps you to protect your project  from being spammed. 
 <br> You can customise the ``` maxIssue```  to set the maximum count of active issue a contributor can have. <br>
 The project is currently a work in progress might have bugs if you do find bugs please report it [here](https://github.com/anushkrishnav/Issue-Watcher/issues) <br>
-<img src="img/botinaction.jpeg" height = "500px">
+<img src="img/sample.jpeg" height = "500px">
 ![]()
 
 ### Example workflow
