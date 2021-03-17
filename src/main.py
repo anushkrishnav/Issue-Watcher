@@ -42,9 +42,11 @@ def get_latest_issue(author, token, repo):
     raw = (r.json())
     k = raw['items']
     k = k[0]
-
-    if len(k['labels']) != 0 and 'on-review' in k['labels'][0]['name']:
-        return None
+    label_count = len(k['labels'])
+    if  label_count != 0:
+        for i in range(label_count):
+            if 'on-review' in k['labels'][i]['name']:
+                return None
     return k['number']
 
 
@@ -70,10 +72,11 @@ author = os.environ['INPUT_AUTHOR']
 repourl = os.environ['INPUT_REPO']
 maxi = os.environ['INPUT_MAXISSUE']
 
-if maxi is None:
+if maxi is None :
     maxi = 2
 else:
-    maxi = int(maxi)
+    
+    maxi = int(''.join(c for c in maxi if c.isdigit()))
 
 github = github.Github(token)
 repo = github.get_repo(repourl)
