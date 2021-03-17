@@ -3,6 +3,7 @@ import requests
 import github
 from os.path import join, dirname
 from dotenv import load_dotenv
+
 dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
 
@@ -43,10 +44,10 @@ repourl = os.environ['INPUT_REPO']
 maxi = os.environ['INPUT_MAXISSUE']
 
 maxi = 2
-#if maxi == None:
-#    maxi = 2
-#else:
-#   maxi = int(maxi)
+if maxi == None:
+   maxi = 2
+else:
+  maxi = int(maxi)
 
 github = github.Github(token)
 repo = github.get_repo(repourl)
