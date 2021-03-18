@@ -3,6 +3,7 @@
 </p> <br>
 
 # Rouge Spammers with a mission to disrupt the peace of the valley ? Fear not we will STOMP the Spammers
+## New Update : adding 'on-review' tag on an issue will stop it from being closed by the Bot allowing contributors to create more than the limited count
 This tool was created to helps you to protect your project  from being spammed. 
 <br> You can customise the ``` maxIssue```  to set the maximum count of active issue a contributor can have. <br>
 The project is currently a work in progress might have bugs if you do find bugs please report it [here](https://github.com/anushkrishnav/Issue-Watcher/issues) <br>
