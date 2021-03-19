@@ -8,6 +8,6 @@ labels: "bug"
 
 (A clear and concise description of what the bug is.)
 
-### Have you read the [Contributing Guidelines on Pull Requests](https://github.com/TesseractCoding/NeoAlgo/blob/master/CONTRIBUTING.md#reporting-new-issues)?
+### Have you read the [Contributing Guidelines on Pull Requests]()?
 
 (Write your answer here.)

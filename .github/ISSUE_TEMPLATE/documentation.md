@@ -1,13 +1,13 @@
 ---
-name: 🐛 Bug Report
-about: Submit a bug report to help us improve
-labels: "bug"
+name: 📚 Documentation
+about: Report an issue related to documentation
+labels: "documentation"
 ---
 
-## 🐛 Bug Report
+## 📚 Documentation
 
-(A clear and concise description of what the bug is.)
+(A clear and concise description of what the issue is.)
 
-### Have you read the [Contributing Guidelines on Pull Requests](https://github.com/TesseractCoding/NeoAlgo/blob/master/CONTRIBUTING.md#reporting-new-issues)?
+### Have you read the [Contributing Guidelines on Pull Requests]()?
 
 (Write your answer here.)
