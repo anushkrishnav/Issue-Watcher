@@ -20,5 +20,5 @@ runs:
   image: 'Dockerfile' # we will use our own Dockerfile to build an image and run it.
 
 branding: #generates a logo for our action
-  icon: arrow-down #icon of the image
+  icon: monitor
   color: blue # background color of the logo of our action
