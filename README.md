@@ -58,10 +58,9 @@ You can find our Code of Conduct [here](/CODE_OF_CONDUCT.md).
 This project is a WIP.
 If you find a security threat or bug please feel free to open up an issue and we will get to it shortly
 
-## Created by [Anush Krishna](https://github.com/anushkrishnav)
-## Developed and Managed at [Tesseract Coding](https://github.com/TesseractCoding)
+### Created by [Anush Krishna](https://github.com/anushkrishnav)
 
-# Thank you 
+# Uses
 
 ### [PyGithub](https://github.com/PyGithub/PyGithub) - Awesome package that made this action possible <br>
 ### [actions/container-action](https://github.com/actions/container-action) - Container Action Template
