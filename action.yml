@@ -15,6 +15,7 @@ inputs:
   maxIssue:
     required : false
     description: set the maximum number of issues a contributor can open
+    default: 2
 runs:
   using: docker # we are saying this action will run on docker
   image: 'Dockerfile' # we will use our own Dockerfile to build an image and run it.
